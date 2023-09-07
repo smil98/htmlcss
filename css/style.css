@@ -13,10 +13,10 @@
 }
 
 * {
-    margin:0;
+    margin: 0;
     list-style: none;
     text-decoration: 0;
-    padding:0;
+    padding: 0;
 }
 
 *:focus {
@@ -25,96 +25,131 @@
 
 /* 상단 메뉴 바 */
 nav {
-    position:fixed;
-    width:100%; height:50px; line-height:50px;
-    text-align:center;
-    background:#FFFFFF;
-    border-bottom:1px solid #c7c6c6;
-    display:flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #FFFFFF;
+    border-bottom: 1px solid #c7c6c6;
+    display: flex;
     justify-content: space-between;
     z-index: 1;
 }
 
 nav div#logo {
-    position:absolute;
-    left:10%; height:100%;
-    width:15%;
+    position: absolute;
+    left: 10%;
+    height: 100%;
+    width: 15%;
     font-family: 'TheJamsil5Bold';
-    font-size:1.6rem;
+    font-size: 1.6rem;
 }
 
 nav div.userArea {
-    position:absolute;
-    left:60%;
-    width:30%; height:100%; 
+    position: absolute;
+    left: 60%;
+    width: 30%;
+    height: 100%;
     display: flex;
     justify-content: right;
 }
 
 nav .userArea div {
-    width:20%;
-    font-size:1.2rem;
+    width: 20%;
+    font-size: 1.2rem;
 }
 
 /* 검색창 */
 nav .userArea #searchArea {
-    overflow:hidden;
+    overflow: hidden;
+    width: 20%;
+    /* Set the initial width */
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
-    transition: 0.5s;
+    transition: width 0.5s;
+    /* Add the transition property for width changes */
+}
+
+/* Add this CSS class for the expanded state */
+nav .userArea #searchArea.expanded {
+    width: 60%;
+    /* Set the expanded width */
+}
+
+/* Remove the width and display properties for #searchBar */
+nav #searchBar {
+    display: none;
+}
+
+/* Ensure that #searchBar is visible when #searchArea is expanded */
+nav .userArea #searchArea.expanded #searchBar {
+    display: inline-block;
+    opacity: 1;
+    /* Ensure the opacity is set to fully visible */
+    transition: opacity 0.5s;
+    /* Add a transition for opacity changes */
 }
 
 nav #searchBar {
-    display:none;
-    width: 60%; height:70%;
-    transform:translateY(-5%);
-    margin-left:5%;
-    border-radius:15px;
-    border:1px solid #c7c6c6;
-    text-align:center;
+    display: none;
+    opacity: 0;
+    width: 60%;
+    height: 70%;
+    transform: translateY(-5%);
+    margin-left: 5%;
+    border-radius: 15px;
+    border: 1px solid #c7c6c6;
+    text-align: center;
 }
 
 article {
-    border:1px solid black;
-    width:80%; height:900px;
-    position:relative;
-    top:50px; left:10%;
+    border: 1px solid black;
+    width: 80%;
+    height: 900px;
+    position: relative;
+    top: 50px;
+    left: 10%;
 }
 
 .promotionArea {
-    width:100%; height:25%;
-    border:1px solid salmon;
+    width: 100%;
+    height: 25%;
+    border: 1px solid salmon;
 }
 
 .promotionArea .arrow {
-    position:absolute;
-    top:10%;
-    width:100%; height:5%;
-    font-size:1.6rem;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 5%;
+    font-size: 1.6rem;
     display: flex;
     justify-content: space-between;
 }
 
 .promotionArea .arrow p {
-    width:3%; line-height:45px;
+    width: 3%;
+    line-height: 45px;
     text-align: center;
 }
 
 .promotionArea ul {
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 .promotionArea li {
-    width: 15%; height:100%;
-    border:1px solid blue;
+    width: 15%;
+    height: 100%;
+    border: 1px solid blue;
 }
 
 .todayBest {
     margin: 5%;
     font-family: 'NanumSquareNeo-Variable';
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
