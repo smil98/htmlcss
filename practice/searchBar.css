@@ -1,0 +1,29 @@
+/* styles.css */
+.search-container {
+    position: relative;
+    max-width: 300px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+}
+
+#search-results {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+#search-results li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#search-results li:hover {
+    background-color: #f0f0f0;
+}

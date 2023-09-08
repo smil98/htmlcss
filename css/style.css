@@ -105,8 +105,14 @@ nav #searchBar {
     text-align: center;
 }
 
+#searchResultsArticle {
+    display: none; /* Initially hide the search results article */
+}
+
+/*article common style*/
+
 article {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
     height: 900px;
     position: relative;
@@ -114,6 +120,12 @@ article {
     left: 10%;
 }
 
+#mainPage {
+    border: 1px solid gold;
+    display:block;
+}
+
+/*Promotion Area*/
 .promotionArea {
     width: 100%;
     height: 25%;
@@ -148,8 +160,277 @@ article {
     border: 1px solid blue;
 }
 
+/*Today's Best*/
 .todayBest {
     margin: 5%;
     font-family: 'NanumSquareNeo-Variable';
     font-size: 1.5rem;
+}
+
+/*Showing results*/
+#searchResultsArticle {
+    display:none;
+}
+
+/*No Result*/
+
+#nullResults {
+    border:1px solid salmon;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    list-style: none;
+    text-decoration: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* 상단 메뉴 바 */
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #FFFFFF;
+    border-bottom: 1px solid #c7c6c6;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+nav div#logo {
+    position: absolute;
+    left: 10%;
+    height: 100%;
+    width: 15%;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1.6rem;
+}
+
+nav div.userArea {
+    position: absolute;
+    left: 60%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+nav .userArea div {
+    width: 20%;
+    font-size: 1.2rem;
+}
+
+/* 검색창 */
+nav .userArea #searchArea {
+    overflow: hidden;
+    width: 20%;
+    /* Set the initial width */
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: width 0.5s;
+    /* Add the transition property for width changes */
+}
+
+/* Add this CSS class for the expanded state */
+nav .userArea #searchArea.expanded {
+    width: 60%;
+    /* Set the expanded width */
+}
+
+/* Remove the width and display properties for #searchBar */
+nav #searchBar {
+    display: none;
+}
+
+/* Ensure that #searchBar is visible when #searchArea is expanded */
+nav .userArea #searchArea.expanded #searchBar {
+    display: inline-block;
+    opacity: 1;
+    /* Ensure the opacity is set to fully visible */
+    transition: opacity 0.5s;
+    /* Add a transition for opacity changes */
+}
+
+nav #searchBar {
+    display: none;
+    opacity: 0;
+    width: 60%;
+    height: 70%;
+    transform: translateY(-5%);
+    margin-left: 5%;
+    border-radius: 15px;
+    border: 1px solid #c7c6c6;
+    text-align: center;
+}
+
+#searchResultsArticle {
+    display: none;
+}
+
+/*article common style*/
+
+article {
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 900px;
+    position: relative;
+    top: 50px;
+    left: 10%;
+}
+
+#mainPage {
+    border: 1px solid gold;
+    /* display:block; */
+    display:none; /* delete this */
+}
+
+/*Promotion Area*/
+.promotionArea {
+    width: 100%;
+    height: 25%;
+    border: 1px solid salmon;
+}
+
+.promotionArea .arrow {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 5%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotionArea .arrow p {
+    width: 3%;
+    line-height: 45px;
+    text-align: center;
+}
+
+.promotionArea ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.promotionArea li {
+    width: 15%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+/*Today's Best*/
+.todayBest {
+    margin: 5%;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.5rem;
+}
+
+/*Showing results*/
+#searchResultsArticle {
+    /* display:none; */
+    display:block;
+    border:1px solid black;
+}
+
+#searchResults {
+    border:1px solid blue;
+    width:70%; height:25%;
+}
+
+#searchResults p {
+    font-family: 'NanumSquareNeo-Variable';
+    margin-top:2.5%;
+    text-indent: 4rem;
+}
+
+/*No Result*/
+
+#nullResults {
+    border:1px solid salmon;
+    align-items: center;
+    display:none;
+}
+
+.wrapNotice {
+    width:50%; height:50%;
+    margin-top:25%; transform:translateY(-50%);
+    margin-left:25%;
+    color:rgb(197, 194, 194, 0.8);
+    text-align:center;
+}
+
+.wrapNotice div:first-child {
+    position: relative;
+    height:60%;
+    font-size:6rem;
+}
+
+.wrapNotice i {
+    position: absolute;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+.wrapNotice div:nth-child(2) {
+    height:40%;
+    font-size:1.5rem;
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+.wrapNotice div:nth-child(2) p {
+    line-height:2.5rem;
+}
+
+.wrapNotice {
+    width:50%; height:50%;
+    margin-top:25%; transform:translateY(-50%);
+    margin-left:25%;
+    color:rgb(197, 194, 194, 0.8);
+    text-align:center;
+}
+
+.wrapNotice div:first-child {
+    position: relative;
+    height:60%;
+    font-size:6rem;
+}
+
+.wrapNotice i {
+    position: absolute;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+.wrapNotice div:nth-child(2) {
+    height:40%;
+    font-size:1.5rem;
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+.wrapNotice div:nth-child(2) p {
+    line-height:2.5rem;
 }
