@@ -1,4 +1,3 @@
-/*
 $(document).ready(function () {
     var isOpen = false;
     var searchResultsDiv = $("#searchResults");
@@ -95,4 +94,3 @@ $(document).ready(function () {
         }
     });
 });
-*/

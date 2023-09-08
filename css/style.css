@@ -245,33 +245,25 @@ nav .userArea div {
 nav .userArea #searchArea {
     overflow: hidden;
     width: 20%;
-    /* Set the initial width */
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: width 0.5s;
-    /* Add the transition property for width changes */
 }
 
-/* Add this CSS class for the expanded state */
 nav .userArea #searchArea.expanded {
     width: 60%;
-    /* Set the expanded width */
 }
 
-/* Remove the width and display properties for #searchBar */
 nav #searchBar {
     display: none;
 }
 
-/* Ensure that #searchBar is visible when #searchArea is expanded */
 nav .userArea #searchArea.expanded #searchBar {
     display: inline-block;
     opacity: 1;
-    /* Ensure the opacity is set to fully visible */
     transition: opacity 0.5s;
-    /* Add a transition for opacity changes */
 }
 
 nav #searchBar {
@@ -291,7 +283,6 @@ nav #searchBar {
 }
 
 /*article common style*/
-
 article {
     /* border: 1px solid black; */
     width: 80%;
@@ -302,16 +293,13 @@ article {
 }
 
 #mainPage {
-    border: 1px solid gold;
-    /* display:block; */
-    display:none; /* delete this */
+    display:block;
 }
 
 /*Promotion Area*/
 .promotionArea {
     width: 100%;
     height: 25%;
-    border: 1px solid salmon;
 }
 
 .promotionArea .arrow {
@@ -339,32 +327,81 @@ article {
 .promotionArea li {
     width: 15%;
     height: 100%;
-    border: 1px solid blue;
+}
+
+/*subMenu*/
+#subMenu {
+    border:1px solid black;
+    width:100%; height:5%;
+    margin:2% 0;
+    display:flex;
+    justify-content: space-evenly;
 }
 
 /*Today's Best*/
 .todayBest {
-    margin: 5%;
+    border:1px solid red;
+    margin-top:0%;
+}
+
+.todayBest .catTitle {
+    padding: 2%;
     font-family: 'NanumSquareNeo-Variable';
     font-size: 1.5rem;
 }
 
+.todayBest #rankingList {
+    border:1px solid green;
+    width:100%;
+}
+
+#rankingList li {
+    font-size:1.2rem;
+    line-height:2.5rem;
+    border:1px solid brown;
+    display:flex;
+    justify-content: space-between;
+}
+
+#rankingList li p {
+    border:1px solid plum;
+    width:30%; height:100%;
+    text-align:center;
+}
+
+#rankingList li p:first-child {
+    width:5%;
+}
+
+#rankingList li p:nth-child(2) {
+    width:20%;
+}
+
+#rankingList li p:nth-child(3) {
+    width:10%;
+}
+
+#rankingList li p:last-child {
+    width:65%;
+}
+
 /*Showing results*/
 #searchResultsArticle {
-    /* display:none; */
-    display:block;
+    display:none;
     border:1px solid black;
 }
 
 #searchResults {
     border:1px solid blue;
-    width:70%; height:25%;
+    width:80%; height:25%;
+    margin-left:10%;
 }
 
 #searchResults p {
     font-family: 'NanumSquareNeo-Variable';
-    margin-top:2.5%;
-    text-indent: 4rem;
+    font-size:1.3rem;
+    margin-top:5%;
+    text-indent: 4.5rem;
 }
 
 /*No Result*/
