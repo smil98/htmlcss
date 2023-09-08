@@ -164,21 +164,73 @@ article {
 .todayBest {
     margin: 5%;
     font-family: 'NanumSquareNeo-Variable';
+    border:1px solid red;
+    margin-top:0%;
     font-size: 1.5rem;
 }
+
+.todayBest .catTitle {
+    padding: 2%;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.5rem;
+}
+
+.todayBest #rankingList {
+    border:1px solid green;
+    width:100%;
+}
+
+#rankingList li {
+    font-size:1.2rem;
+    line-height:2.5rem;
+    border:1px solid brown;
+    display:flex;
+    justify-content: space-between;
+}
+
+#rankingList li p {
+    border:1px solid plum;
+    width:30%; height:100%;
+    text-align:center;
+}
+
+#rankingList li p:first-child {
+    width:5%;
+}
+
+#rankingList li p:nth-child(2) {
+    width:20%;
+}
+
+#rankingList li p:nth-child(3) {
+    width:10%;
+}
+
+#rankingList li p:last-child {
+    width:65%;
+}
+
 
 /*Showing results*/
 #searchResultsArticle {
     display:none;
+    border:1px solid black;
+}
+
+#searchResults {
+    border:1px solid blue;
+    width:80%; height:25%;
+    margin-left:10%;
+}
+
+#searchResults p {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size:1.3rem;
+    margin-top:5%;
+    text-indent: 4.5rem;
 }
 
 /*No Result*/
-
-#nullResults {
-    border:1px solid salmon;
-    align-items: center;
-}
-
 @font-face {
     font-family: 'TheJamsil5Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
@@ -278,10 +330,6 @@ nav #searchBar {
     text-align: center;
 }
 
-#searchResultsArticle {
-    display: none;
-}
-
 /*article common style*/
 article {
     /* border: 1px solid black; */
@@ -336,72 +384,6 @@ article {
     margin:2% 0;
     display:flex;
     justify-content: space-evenly;
-}
-
-/*Today's Best*/
-.todayBest {
-    border:1px solid red;
-    margin-top:0%;
-}
-
-.todayBest .catTitle {
-    padding: 2%;
-    font-family: 'NanumSquareNeo-Variable';
-    font-size: 1.5rem;
-}
-
-.todayBest #rankingList {
-    border:1px solid green;
-    width:100%;
-}
-
-#rankingList li {
-    font-size:1.2rem;
-    line-height:2.5rem;
-    border:1px solid brown;
-    display:flex;
-    justify-content: space-between;
-}
-
-#rankingList li p {
-    border:1px solid plum;
-    width:30%; height:100%;
-    text-align:center;
-}
-
-#rankingList li p:first-child {
-    width:5%;
-}
-
-#rankingList li p:nth-child(2) {
-    width:20%;
-}
-
-#rankingList li p:nth-child(3) {
-    width:10%;
-}
-
-#rankingList li p:last-child {
-    width:65%;
-}
-
-/*Showing results*/
-#searchResultsArticle {
-    display:none;
-    border:1px solid black;
-}
-
-#searchResults {
-    border:1px solid blue;
-    width:80%; height:25%;
-    margin-left:10%;
-}
-
-#searchResults p {
-    font-family: 'NanumSquareNeo-Variable';
-    font-size:1.3rem;
-    margin-top:5%;
-    text-indent: 4.5rem;
 }
 
 /*No Result*/
