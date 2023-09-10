@@ -20,11 +20,11 @@
         <section class="fillInfo">
             <p class="logo"><i class="fa-solid fa-worm"></i> Bookworm</p>
             <form action="/action_page.php" method="get">
-                <label for="userId">ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="userId" name="userId"><br><br>
-                <label for="userPw">Password :</label>
-                <input type="text" id="userPw" name="userPw"><br><br>
-                <input type="checkbox" checked="checked" name="remember"><label class="remember">Remember me</label>
+                <input type="text" id="userId" name="userId" placeholder="Enter User ID"><br><br>
+                <input type="text" id="userPw" name="userPw" placeholder="Enter Password"><br><br>
+                <input class="remember" type="checkbox" checked="checked" name="remember">
+                <label class="remember">Remember me</label>
+                <a href="findInfo.html" class="findInfo">Forgot Password?</a>
                 <button type="submit">SIGN IN</button>
                 <p>Don't have an account? <a href="signIn.html">Sign Up</a></p>
             </form>
