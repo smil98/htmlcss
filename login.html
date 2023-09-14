@@ -21,10 +21,12 @@
             <p class="logo"><i class="fa-solid fa-worm"></i> Bookworm</p>
             <form action="/action_page.php" method="get">
                 <input type="text" id="userId" name="userId" placeholder="Enter User ID"><br><br>
-                <input type="text" id="userPw" name="userPw" placeholder="Enter Password"><br><br>
-                <input class="remember" type="checkbox" checked="checked" name="remember">
-                <label class="remember">Remember me</label>
-                <a href="findInfo.html" class="findInfo">Forgot Password?</a>
+                <input type="password" id="userPw" name="userPw" placeholder="Enter Password"><br><br>
+                <div>
+                    <input class="remember" type="checkbox" checked="checked" name="remember">
+                    <label class="remember">Remember me</label>
+                    <a href="findInfo.html" class="findInfo">Forgot Password?</a>
+                </div>
                 <button type="submit">SIGN IN</button>
                 <p>Don't have an account? <a href="signIn.html">Sign Up</a></p>
             </form>

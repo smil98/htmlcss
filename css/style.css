@@ -314,7 +314,7 @@ article {
     border:1px solid #c7c6c6;
     border-radius:5%;
     position:relative;
-    top:8%; left:25%;
+    top:15%; left:25%;
     width:50%; height:50%;
 }
 
@@ -325,30 +325,33 @@ article {
     padding:5% 0;
 }
 
-.fillInfo form {
-    margin-top:10%;
-}
-
 .fillInfo form input {
     width:60%; height:30px;
     margin-left:20%;
-    text-align:center;
+    text-align:left;
+    text-indent:10px;
+}
 
+.fillInfo form div {
+    border:0px solid blue;
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+    margin-left:20%;
 }
 
 .fillInfo form input.remember {
     height:15px;
-    text-align:left;
     width:3%;
-    transform:translateY(10%);
+    transform:translateY(-5%);
+    margin-left:0;
 }
-
 
 .fillInfo form label {
     font-family: 'NanumSquareNeo-Variable';
-    font-size:0.9rem;
+    font-size:0.8rem;
     border:0px solid green;
-    margin-right:13%;
+    margin-left:-45%;
 }
 
 .fillInfo form .findInfo {
